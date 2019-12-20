@@ -22,7 +22,7 @@ const plugins: IPlugin[] = [
         // default false
         enable: true,
         // default zh-CN
-        default: 'zh-CN',
+        default: 'en-US',
         // default true, when it is true, will use `navigator.language` overwrite default
         baseNavigator: true,
       },
@@ -114,6 +114,20 @@ export default {
               authority: ['admin'],
             },
             {
+              path: '/Location',
+              name: 'Location',
+              icon: 'crown',
+              routes:[
+                {
+                  
+                    path: '/Location/EnterLocation',
+                    name: 'EnerLocation',
+                    icon: 'crown',
+                    component: './Location/EnterLocation',
+                },
+              ]
+            },
+            {
               component: './404',
             },
           ],
@@ -177,10 +191,10 @@ export default {
   },
   // chainWebpack: webpackPlugin,
   proxy: {
-    '/server/api/': {
-      target: 'https://preview.pro.ant.design/',
+    '/api/': {
+      target: 'https://localhost:9090/',
       changeOrigin: true,
-      pathRewrite: { '^/server': '' },
+      pathRewrite: { '^/api/': '' },
     },
   },
 } as IConfig;

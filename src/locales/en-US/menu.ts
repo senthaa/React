@@ -4,6 +4,8 @@ export default {
   'menu.home': 'Home',
   'menu.admin': 'admin',
   'menu.login': 'Login',
+  'menu.Location': 'Location',
+  'menu.EnerLocation': 'Ener Location',
   'menu.register': 'Register',
   'menu.register.result': 'Register Result',
   'menu.dashboard': 'Dashboard',
